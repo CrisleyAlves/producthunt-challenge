@@ -2,6 +2,8 @@
 
 This is a React + Vite project that displays Product Hunt posts with features like tabbed sorting, date filtering, infinite scroll, and search. It uses Apollo Client for GraphQL queries, SCSS for styling, and includes a floating widget for quick navigation.
 
+Latest version deployed in Vercel: https://producthunt-challenge.vercel.app/
+
 ## Features
 
 - **React 19 + Vite** for fast development and HMR
