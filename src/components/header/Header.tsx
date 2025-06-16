@@ -2,9 +2,9 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
-import { PROFILE_PICTURE } from "../../config/constants";
-import Avatar from "../avatar/Avatar";
-import InputDate from "../datepicker/DatePIcker";
+import { PROFILE_PICTURE } from "@config/constants";
+import Avatar from "@components/avatar/Avatar";
+import InputDate from "@components/datepicker/DatePIcker";
 
 export default function Header({
   handleOnChangeDate,

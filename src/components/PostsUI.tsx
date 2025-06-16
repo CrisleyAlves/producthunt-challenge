@@ -1,11 +1,11 @@
 import React from "react";
 
-import type { PostType } from "../types";
+import type { PostType } from "@types";
 
-import PostListUI from "./posts/PostListUI";
-import Tab from "./tab/Tab";
-import Search from "./search/Search";
-import Header from "./header/Header";
+import PostListUI from "@components/posts/PostListUI";
+import Tab from "@components/tab/Tab";
+import Search from "@components/search/Search";
+import Header from "@components/header/Header";
 
 const PostsUI = React.memo(function PostsUI({
   setShowSearchForm,

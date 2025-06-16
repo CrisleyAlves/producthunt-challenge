@@ -2,9 +2,9 @@ import React from "react";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import type { PostType } from "../../types/index";
+import type { PostType } from "@types/index";
 
-import Avatar from "../avatar/Avatar";
+import Avatar from "@components/avatar/Avatar";
 
 type PostListUIProps = {
   posts?: PostType[];

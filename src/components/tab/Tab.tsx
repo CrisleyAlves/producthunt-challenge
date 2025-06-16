@@ -1,6 +1,7 @@
 import React from "react";
 import clsx from "clsx";
-import { POST_ORDER_TYPE } from "../../config/constants";
+
+import { POST_ORDER_TYPE } from "@config/constants";
 
 export default function Tab({
   selectedTab,

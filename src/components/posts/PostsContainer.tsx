@@ -1,13 +1,13 @@
 import { useState, useEffect, useMemo, useCallback } from "react";
 
-import { NUMBER_OF_POSTS, POST_ORDER_TYPE } from "../../config/constants";
-import { getPostsParams, previousDay } from "../../utils/DateUtils";
-import usePostsQuery from "../../hooks/usePostsQuery";
-import usePageBottom from "../../hooks/usePageBottom";
+import { NUMBER_OF_POSTS, POST_ORDER_TYPE } from "@config/constants";
+import { getPostsParams, previousDay } from "@utils/DateUtils";
+import usePostsQuery from "@hooks/usePostsQuery";
+import usePageBottom from "@hooks/usePageBottom";
 
-import PostsUI from "../PostsUI";
-import FloatingWidget from "../floatingWidget/FloatingWidget";
-import useFloatingWidget from "../../hooks/useFloatingWidget";
+import PostsUI from "@components/PostsUI";
+import FloatingWidget from "@components/floatingWidget/FloatingWidget";
+import useFloatingWidget from "@hooks/useFloatingWidget";
 
 const INITIAL_DATE = new Date();
 
