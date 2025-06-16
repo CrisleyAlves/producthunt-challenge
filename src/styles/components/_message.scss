@@ -1,0 +1,18 @@
+@use "../themes/colors" as *;
+@use '../variables/_mixins' as *;
+@use '../base/_typography' as *;
+
+.message {
+  @extend .regular-m;
+  padding: 5px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+
+  &--error {
+    color: $color-white;
+    background-color: $color-red;
+  }
+}
