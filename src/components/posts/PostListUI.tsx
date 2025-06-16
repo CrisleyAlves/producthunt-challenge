@@ -2,23 +2,12 @@ import React from "react";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import type { PostType } from "../../types/index";
+
 import Avatar from "../avatar/Avatar";
 
-type Post = {
-  name: string;
-  tagline: string;
-  votesCount: number;
-  url: string;
-  thumbnail?: {
-    url: string;
-  };
-};
-
 type PostListUIProps = {
-  posts?: {
-    cursor: string;
-    node: Post;
-  }[];
+  posts?: PostType[];
 };
 
 export default function PostListUI({ posts = [] }: PostListUIProps) {

@@ -1,5 +1,7 @@
 import React from "react";
 
+import type { PostType } from "../types";
+
 import PostListUI from "./posts/PostListUI";
 import Tab from "./tab/Tab";
 import Search from "./search/Search";
@@ -15,7 +17,16 @@ const PostsUI = React.memo(function PostsUI({
   posts = [],
   postDate,
   showSearchForm = false,
-  loading = false,
+}: {
+  setShowSearchForm: (show: boolean) => void;
+  onClickClearSearchForm: () => void;
+  onSubmitSearchForm: (topic: string) => void;
+  selectedTab: string;
+  onClickTabItem: (tabName: string) => void;
+  onChangeDate: (dateString: string) => void;
+  posts?: PostType[];
+  postDate?: Date | null;
+  showSearchForm?: boolean;
 }) {
   const handleOnChangeDate = (dateString: string) => {
     if (!dateString) return;
@@ -44,7 +55,7 @@ const PostsUI = React.memo(function PostsUI({
 
       <Tab onClickTabItem={onClickTabItem} selectedTab={selectedTab} />
 
-      <PostListUI posts={posts} loading={loading} />
+      <PostListUI posts={posts} />
     </>
   );
 });
