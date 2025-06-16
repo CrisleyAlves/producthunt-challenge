@@ -22,8 +22,8 @@
   &__input {
     @include font-weight('light');
     width: 100%;
-    border: 1px solid $color-gray-medium;
-    padding: 5px 15px;
+    border: rem-calc(1) solid $color-gray-medium;
+    padding: rem-calc(5) rem-calc(15);
     color: $color-black;
   }
 
@@ -34,6 +34,6 @@
     background-color: transparent;
     border: none;
     color: $color-orange;
-    padding: 5px 15px;
+    padding: rem-calc(5) rem-calc(15);
   }
 }

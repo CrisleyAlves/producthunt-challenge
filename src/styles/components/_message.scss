@@ -4,7 +4,7 @@
 
 .message {
   @extend .regular-m;
-  padding: 5px;
+  padding: rem-calc(5);
   position: fixed;
   left: 0;
   top: 0;

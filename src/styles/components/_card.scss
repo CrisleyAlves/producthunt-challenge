@@ -6,5 +6,5 @@
   background-color: $color-white;
   box-shadow: 0 rem-calc(1) rem-calc(1) rgba(0, 0, 0, 0.1);
   border-radius: rem-calc(15);
-  border: 1px solid $color-gray-light;
+  border: rem-calc(1) solid $color-gray-light;
 }

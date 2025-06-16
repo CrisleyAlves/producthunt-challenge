@@ -50,11 +50,11 @@
     border-radius: rem-calc(10);
     width: rem-calc(60);
     height: rem-calc(60);
-    border: 1px solid $color-gray-medium;
+    border: rem-calc(1) solid $color-gray-medium;
     background-color: $color-white;
 
     position: relative;
-    margin-right: -30px;
+    margin-right: rem-calc(-30);
 
     .icon {
       color: $color-orange;

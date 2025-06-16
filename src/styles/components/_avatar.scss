@@ -1,14 +1,15 @@
 @use "../base/typography" as *;
+@use "../variables/mixins" as *;
 
 .avatar {
-  width: 50px;
-  height: 50px;
+  width: rem-calc(50);
+  height: rem-calc(50);
 
   &--circle {
     border-radius: 50%;
   }
 
   &--rounded {
-    border-radius: 15px;
+    border-radius: rem-calc(15);
   }
 }
