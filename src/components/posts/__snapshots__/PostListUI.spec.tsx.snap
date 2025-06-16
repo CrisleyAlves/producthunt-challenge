@@ -1,0 +1,128 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`PostListUI > renders a list of posts 1`] = `
+<div>
+  <ul
+    class="post__list"
+  >
+    <li
+      class="post__list__item card card--rounded"
+    >
+      <div
+        class="post"
+      >
+        <img
+          alt="post iamge"
+          aria-description="post iamge"
+          class="avatar avatar--rounded"
+          src="https://example.com/img1.png"
+        />
+        <div
+          class="post__content"
+        >
+          <h2
+            class="post__title"
+          >
+            Test Post 1
+          </h2>
+          <p
+            class="post__description"
+          >
+            First test post
+          </p>
+          <a
+            class="post__link"
+            href="https://example.com/1"
+            target="_blank"
+          >
+            visit
+          </a>
+        </div>
+        <div
+          class="post__count"
+        >
+          <svg
+            aria-hidden="true"
+            class="svg-inline--fa fa-heart icon"
+            data-icon="heart"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"
+              fill="currentColor"
+            />
+          </svg>
+          <p
+            class="post__count__value"
+          >
+            42
+          </p>
+        </div>
+      </div>
+    </li>
+    <li
+      class="post__list__item card card--rounded"
+    >
+      <div
+        class="post"
+      >
+        <img
+          alt="post iamge"
+          aria-description="post iamge"
+          class="avatar avatar--rounded"
+          src="https://example.com/img2.png"
+        />
+        <div
+          class="post__content"
+        >
+          <h2
+            class="post__title"
+          >
+            Test Post 2
+          </h2>
+          <p
+            class="post__description"
+          >
+            Second test post
+          </p>
+          <a
+            class="post__link"
+            href="https://example.com/2"
+            target="_blank"
+          >
+            visit
+          </a>
+        </div>
+        <div
+          class="post__count"
+        >
+          <svg
+            aria-hidden="true"
+            class="svg-inline--fa fa-heart icon"
+            data-icon="heart"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"
+              fill="currentColor"
+            />
+          </svg>
+          <p
+            class="post__count__value"
+          >
+            99
+          </p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+`;

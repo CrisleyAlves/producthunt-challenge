@@ -28,6 +28,11 @@ const MOCKED_POSTS = [
 
 describe("PostListUI", () => {
   it("renders a list of posts", () => {
+    const { container } = render(<PostListUI posts={MOCKED_POSTS} />);
+    expect(container).toMatchSnapshot();
+  });
+
+  it("renders a list of posts", () => {
     render(<PostListUI posts={MOCKED_POSTS} />);
     expect(screen.getByText("Test Post 1")).toBeDefined();
     expect(screen.getByText("Test Post 2")).toBeDefined();

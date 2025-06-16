@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`renders the avatar image with correct src and alt 1`] = `
+exports[`Avatar Component > renders the avatar image with correct src and alt 1`] = `
 <div>
   <img
     alt="User Avatar"
