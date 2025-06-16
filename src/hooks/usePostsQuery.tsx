@@ -16,10 +16,9 @@ import { GET_POSTS } from "../graphql/posts/queries";
  * @example
  * const { loading, data, refetch } = usePostsQuery({
  *   first: 10,
- *   order: "DESC",
  *   postedBefore: new Date(),
  *   postedAfter: new Date("2023-01-01"),
- *   topic: "technology",
+ *   topic: "art",
  *   after: null,
  * });
  */
@@ -38,7 +37,7 @@ export default function usePostsQuery({
   topic?: string;
   after?: string | null;
 }) {
-  const { loading, data, refetch } = useQuery(GET_POSTS, {
+  const { loading, data, refetch, error } = useQuery(GET_POSTS, {
     variables: {
       first,
       order,
@@ -49,5 +48,5 @@ export default function usePostsQuery({
     },
   });
 
-  return { loading, data, refetch };
+  return { loading, data, refetch, error };
 }

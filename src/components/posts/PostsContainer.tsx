@@ -6,6 +6,7 @@ import usePostsQuery from "@hooks/usePostsQuery";
 import usePageBottom from "@hooks/usePageBottom";
 
 import PostsUI from "@components/PostsUI";
+import Message from "@components/message/Message";
 import FloatingWidget from "@components/floatingWidget/FloatingWidget";
 import useFloatingWidget from "@hooks/useFloatingWidget";
 
@@ -37,7 +38,7 @@ export default function PostsContainer() {
     ? POST_ORDER_TYPE.NEWEST.value
     : POST_ORDER_TYPE.POPULAR.value;
 
-  const { loading, data, refetch } = usePostsQuery({
+  const { loading, data, refetch, error } = usePostsQuery({
     topic: searchTopic,
     first: NUMBER_OF_POSTS,
     order: orderType,
@@ -129,6 +130,12 @@ export default function PostsContainer() {
       {showFloatingWidget && <FloatingWidget />}
       {loading && <div className="loader">loading...</div>}
       <div className="container">
+        {error && (
+          <Message
+            classNames="message--error"
+            message="An error occurred when trying to reach server. Please try again later."
+          />
+        )}
         <PostsUI
           onSubmitSearchForm={onSubmitSearchForm}
           onChangeDate={onChangeDate}
