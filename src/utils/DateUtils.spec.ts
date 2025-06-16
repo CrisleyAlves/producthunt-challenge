@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 
-import { previousDay, getPostsParams } from "./DateUtils";
 import { POST_ORDER_TYPE } from "../config/constants";
+import { previousDay, getPostsParams } from "./DateUtils";
 
 describe("DateUtils", () => {
   describe("previousDay", () => {
