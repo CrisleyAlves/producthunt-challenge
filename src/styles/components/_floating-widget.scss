@@ -1,0 +1,19 @@
+@use "../themes/colors" as *;
+@use '../variables/_mixins' as *;
+
+.floating-widget {
+  border: none;
+  background-color: transparent;
+  color: $color-white; 
+  position: fixed;
+  bottom: rem-calc(30);
+  right: rem-calc(30);
+  width: rem-calc(50);
+  height: rem-calc(50);
+  background-color: $color-orange;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}

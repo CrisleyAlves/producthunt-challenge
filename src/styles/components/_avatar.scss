@@ -1,0 +1,14 @@
+@use "../base/typography" as *;
+
+.avatar {
+  width: 50px;
+  height: 50px;
+
+  &--circle {
+    border-radius: 50%;
+  }
+
+  &--rounded {
+    border-radius: 15px;
+  }
+}

@@ -1,0 +1,27 @@
+@use "../themes/colors" as *;
+@use '../variables/_mixins' as *;
+@use "../base/typography" as *;
+
+.tab {
+  background-color: $color-white;
+  display: flex;
+  justify-content: space-between;
+  padding: rem-calc(0);
+  padding-top: rem-calc(15);
+
+  &__item {
+    @extend .regular-l;
+    @include font-weight('medium');
+    background-color: $color-white;
+    border: none;
+    color: #909296;
+    padding-bottom: rem-calc(10);
+    text-align: center;
+    width: 100%;
+
+    &--active {
+      border-bottom: 3px solid $color-orange;
+      color: $color-orange;
+    }
+  }
+}

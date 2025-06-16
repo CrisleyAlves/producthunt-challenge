@@ -1,0 +1,18 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`constants > should match the constants snapshot 1`] = `
+{
+  "NUMBER_OF_POSTS": 20,
+  "POST_ORDER_TYPE": {
+    "NEWEST": {
+      "label": "Newest",
+      "value": "NEWEST",
+    },
+    "POPULAR": {
+      "label": "Popular",
+      "value": "VOTES",
+    },
+  },
+  "PROFILE_PICTURE": "https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y",
+}
+`;

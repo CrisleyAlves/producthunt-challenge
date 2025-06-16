@@ -1,0 +1,16 @@
+@use 'sass:map';
+
+$font-weights: (
+  light: 300,
+  regular: 400,
+  medium: 500,
+  bold: 700,
+);
+
+@function rem-calc($px, $base: 16) {
+  @return calc($px / $base) * 1rem;
+}
+
+@mixin font-weight($weight-name) {
+  font-weight: map.get($font-weights, $weight-name);
+}

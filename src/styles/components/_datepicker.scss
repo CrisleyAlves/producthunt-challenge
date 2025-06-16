@@ -1,0 +1,20 @@
+@use "../themes/colors" as *;
+@use '../variables/_mixins' as *;
+@use "../base/typography" as *;
+
+.react-datepicker__tab-loop {
+  position: absolute;
+}
+
+.datepicker {
+  @extend .regular-l;
+  border: none;
+  border-radius: rem-calc(10);
+  cursor: pointer;
+  padding: rem-calc(5) rem-calc(15);
+  position: relative;
+  background-color: $color-gray-medium;
+  color: $color-black;
+  text-align: center;
+  flex: 1;
+}

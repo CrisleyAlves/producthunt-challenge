@@ -1,0 +1,19 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`InputDate > renders the DatePicker component 1`] = `
+<div>
+  <div
+    class="react-datepicker-wrapper"
+  >
+    <div
+      class="react-datepicker__input-container"
+    >
+      <input
+        class="datepicker"
+        type="text"
+        value="12/31/2022"
+      />
+    </div>
+  </div>
+</div>
+`;

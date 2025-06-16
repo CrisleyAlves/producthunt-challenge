@@ -1,0 +1,44 @@
+@use '../variables/mixins' as *; // assuming _rem.scss is in the same directory or in your Sass load path
+
+
+/* Default (Mobile-First) Typography Styles */
+.regular-l {
+  font-size: rem-calc(16);
+}
+
+.regular-m {
+  font-size: rem-calc(14);
+}
+
+.regular-s {
+  font-size: rem-calc(11);
+}
+
+/* Media Queries for Larger Screens */
+@media (min-width: rem-calc(768)) {
+  .regular-l {
+    font-size: rem-calc(18);
+  }
+
+  .regular-m {
+    font-size: rem-calc(16);
+  }
+
+  .regular-s {
+    font-size: rem-calc(12);
+  }
+}
+
+@media (min-width: rem-calc(1024)) {
+  .regular-l {
+    font-size: rem-calc(20);
+  }
+
+  .regular-m {
+    font-size: rem-calc(18);
+  }
+
+  .regular-s {
+    font-size: rem-calc(14);
+  }
+}

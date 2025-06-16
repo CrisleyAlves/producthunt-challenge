@@ -1,0 +1,75 @@
+@use "../themes/colors" as *;
+@use '../variables/_mixins' as *;
+@use "../base/typography" as *;
+
+
+.post {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: rem-calc(20);
+  
+  &__link {
+    @extend .regular-l;
+    @include font-weight('light');
+    color: $color-orange;
+  }
+
+  &__list {
+    margin: rem-calc(15) rem-calc(30);
+
+    &__item {
+      margin-bottom: rem-calc(15);
+    }
+  }
+
+  &__content {
+    flex: 1;
+    text-align: left
+  }
+
+  &__title {
+    @extend .regular-l;
+    @include font-weight('bold');
+    color: $color-black;
+    margin-bottom: rem-calc(5);
+  }
+
+  &__description {
+    @extend .regular-m;
+    color: $color-black-muted;
+    margin-top: rem-calc(5);
+  }
+
+  &__count {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: rem-calc(10);
+    width: rem-calc(60);
+    height: rem-calc(60);
+    border: 1px solid $color-gray-medium;
+    background-color: $color-white;
+
+    position: relative;
+    margin-right: -30px;
+
+    .icon {
+      color: $color-orange;
+      width: rem-calc(24);
+      margin-bottom: rem-calc(5);
+    }
+
+    &__value {
+      @extend .regular-l;
+      @include font-weight('light');
+    }
+
+    &--active {
+      background-color: $color-orange;
+      color: $color-white;
+    }
+  }
+}

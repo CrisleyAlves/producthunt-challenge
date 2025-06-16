@@ -1,0 +1,39 @@
+@use "../themes/colors" as *;
+@use '../variables/_mixins' as *;
+@use "../base/typography" as *;
+
+.search {
+  &__wrapper {
+    width: 100%;
+    display: none;
+    position: relative;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  &__button {
+    background-color: transparent;
+    border: none;
+    color: $color-gray-dark;
+  }
+
+  &__input {
+    @include font-weight('light');
+    width: 100%;
+    border: 1px solid $color-gray-medium;
+    padding: 5px 15px;
+    color: $color-black;
+  }
+
+  &__clear {
+    @extend .regular-l;
+    position: absolute;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    color: $color-orange;
+    padding: 5px 15px;
+  }
+}

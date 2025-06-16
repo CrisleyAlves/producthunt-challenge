@@ -1,0 +1,12 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renders the avatar image with correct src and alt 1`] = `
+<div>
+  <img
+    alt="User Avatar"
+    aria-description="This is a user avatar"
+    class="avatar "
+    src="https://example.com/avatar.jpg"
+  />
+</div>
+`;

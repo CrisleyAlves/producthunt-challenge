@@ -1,0 +1,43 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Search > applies active class when showSearchForm is true 1`] = `
+<div>
+  <div
+    class="search__wrapper search__wrapper--active"
+  >
+    <form>
+      <input
+        class="search__input"
+        name="topic"
+      />
+      <button
+        class="search__clear"
+        type="reset"
+      >
+        clear
+      </button>
+    </form>
+  </div>
+</div>
+`;
+
+exports[`Search > renders the search input and clear button 1`] = `
+<div>
+  <div
+    class="search__wrapper search__wrapper--active"
+  >
+    <form>
+      <input
+        class="search__input"
+        name="topic"
+      />
+      <button
+        class="search__clear"
+        type="reset"
+      >
+        clear
+      </button>
+    </form>
+  </div>
+</div>
+`;
