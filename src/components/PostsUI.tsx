@@ -1,9 +1,11 @@
+import React from "react";
+
 import PostListUI from "./posts/PostListUI";
 import Tab from "./tab/Tab";
 import Search from "./search/Search";
 import Header from "./header/Header";
 
-export default function PostsUI({
+const PostsUI = React.memo(function PostsUI({
   setShowSearchForm,
   onClickClearSearchForm,
   onSubmitSearchForm,
@@ -43,7 +45,8 @@ export default function PostsUI({
       <Tab onClickTabItem={onClickTabItem} selectedTab={selectedTab} />
 
       <PostListUI posts={posts} loading={loading} />
-      {/* <Posts /> */}
     </>
   );
-}
+});
+
+export default PostsUI;

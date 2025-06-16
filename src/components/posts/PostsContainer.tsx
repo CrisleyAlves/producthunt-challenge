@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useCallback } from "react";
 
 import { NUMBER_OF_POSTS, POST_ORDER_TYPE } from "../../config/constants";
 import { getPostsParams, previousDay } from "../../utils/DateUtils";
@@ -76,36 +76,53 @@ export default function PostsContainer() {
     }
   }, [isAtPageBottom]);
 
-  const onClickTabItem = (orderLabel: string) => {
-    setCurrentState({
-      data: [],
-      endCursor: null,
-    });
-    setSelectedTab(orderLabel);
-  };
+  const onClickTabItem = useCallback(
+    (orderLabel: string) => {
+      setCurrentState({
+        data: [],
+        endCursor: null,
+      });
+      setSelectedTab(orderLabel);
+    },
+    [setCurrentState, setSelectedTab]
+  );
 
-  const onChangeDate = (date: Date) => {
+  const onChangeDate = useCallback((date: Date) => {
     setPostDate(date);
     setNewest({ data: [], endCursor: null });
     setPopular({ data: [], endCursor: null });
-  };
+  }, []);
 
-  const onSubmitSearchForm = (topic: string) => {
-    if (!topic) return;
-    const { orderType, selectedDate, yesterday } = getPostsParams(
-      selectedTab,
-      postDate.toLocaleDateString("en-US")
-    );
-    setCurrentState({ data: [], endCursor: null });
-    setSearchTopic(topic);
-    refetch({
-      topic: topic,
-      first: NUMBER_OF_POSTS,
-      order: orderType,
-      postedBefore: selectedDate,
-      postedAfter: yesterday,
-    });
-  };
+  const onSubmitSearchForm = useCallback(
+    (topic: string) => {
+      if (!topic) return;
+      const { orderType, selectedDate, yesterday } = getPostsParams(
+        selectedTab,
+        postDate.toLocaleDateString("en-US")
+      );
+      setCurrentState({ data: [], endCursor: null });
+      setSearchTopic(topic);
+      refetch({
+        topic: topic,
+        first: NUMBER_OF_POSTS,
+        order: orderType,
+        postedBefore: selectedDate,
+        postedAfter: yesterday,
+      });
+    },
+    [selectedTab, postDate, setCurrentState, setSearchTopic, refetch]
+  );
+
+  const handleSetShowSearchForm = useCallback(() => {
+    setShowSearchForm((prev) => !prev);
+  }, [setShowSearchForm]);
+
+  const handleSetSearchTopic = useCallback(
+    (topic: string) => {
+      setSearchTopic(topic);
+    },
+    [setSearchTopic]
+  );
 
   return (
     <>
@@ -119,8 +136,8 @@ export default function PostsContainer() {
           onClickTabItem={onClickTabItem}
           posts={currentState.data}
           postDate={postDate}
-          setShowSearchForm={() => setShowSearchForm(!showSearchForm)}
-          onClickClearSearchForm={() => setSearchTopic("")}
+          setShowSearchForm={handleSetShowSearchForm}
+          onClickClearSearchForm={() => handleSetSearchTopic("")}
           showSearchForm={showSearchForm}
           loading={loading}
         />

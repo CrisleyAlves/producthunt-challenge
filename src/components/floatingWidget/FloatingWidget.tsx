@@ -5,10 +5,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { scrollToTop } from "../../utils/ScrollUtils";
 
 export default function FloatingWidget() {
+  const handleOnClickScrollToTop = React.useCallback(() => {
+    scrollToTop();
+  }, []);
+
   return (
     <button
       className="floating-widget"
-      onClick={() => scrollToTop()}
+      onClick={handleOnClickScrollToTop}
       aria-label="Scroll to top"
     >
       <FontAwesomeIcon className="icon" icon={faArrowUp} />
